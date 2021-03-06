@@ -5,6 +5,7 @@ Author: ForeverHaibara
 import sympy as sp
 
 
+
 def rationalize(num):
     '''
     将 num 视为sympy的分数(Rational) 并返回
@@ -14,7 +15,7 @@ def rationalize(num):
             a = int(num.split('.')[0])
             exponent = 10**len(num.split('.')[1])
             b = int(num.split('.')[1])
-            return sp.Rational(a*exponent+b if a>=0 else a*exponent-b,exponent)
+            return sp.Rational(a*exponent+b if '-' not in num else a*exponent-b,exponent)
         elif '/' in num:
             a = int(num.split('/')[0])
             b = int(num.split('/')[1])
@@ -57,10 +58,7 @@ def manufacture(f):
                     
                 exponent = 10**(j2-i-1)
                 frac1 = int(f[j1:i])
-                if frac1 >= 0:
-                    f = f[:j1] + str(frac1*exponent+int(f[i+1:j2])) + '/' +str(exponent) + f[j2:]
-                else:
-                    f = f[:j1] + str(frac1*exponent-int(f[i+1:j2])) + '/' +str(exponent) + f[j2:]
+                f = f[:j1] + str(frac1*exponent+int(f[i+1:j2])) + '/' +str(exponent) + f[j2:]
                 break
         else:
             flag = False
