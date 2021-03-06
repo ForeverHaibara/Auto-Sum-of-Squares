@@ -15,6 +15,7 @@ Automatically express a function in a sum-of-squares form.
 输入一个以x为单个自变量的有理函数，例（注：\**和^表示幂）：
 
 输入自变量x的下界left，若留空则默认为0
+
 输入函数的猜测极小值点，若留空则默认为0
 
 程序将输出配方结果（极小值点选取不优、题目错误等问题可能导致尝试失败）
