@@ -3,9 +3,13 @@
 
 Automatically express a function in a sum-of-squares form.
 
+<br>
+
 # 环境 Environment:
 1. Python3
 2. Sympy包
+
+<br>
 
 # 使用说明 Tutorial
 输入一个以x为单个自变量的有理函数，例（注：\**和^表示幂）：
@@ -14,6 +18,8 @@ Automatically express a function in a sum-of-squares form.
 输入函数的猜测极小值点，若留空则默认为0
 
 程序将输出配方结果（极小值点选取不优、题目错误等问题可能导致尝试失败）
+
+<br>
 
 # 范例输入输出 Example Input and Output
   ## 输入：
